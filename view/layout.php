@@ -19,9 +19,9 @@
                         ?>
                     </ul>
                 </li>
-                <li><a href="testError">Info</a></li>
+                <li><a href="info">Info</a></li>
                 <li><a href="./">Home page</a></li>
-                <li><a href="registerForm">Register</a></li>
+                <!-- <li><a href="registerForm">Register</a></li> -->
                 <div class="pull-right">
                     <li>
                         <from action="search">
