@@ -24,10 +24,10 @@
                 <!-- <li><a href="registerForm">Register</a></li> -->
                 <div class="pull-right">
                     <li>
-                        <from action="search">
+                        <form action="search">
                             <input type="text" name="otsi">
                             <input type="submit" value="otsi">
-                        </from>
+                        </form>
                     </li>
                 </div>
             </ul>			
@@ -43,7 +43,9 @@
                 ?>
             </div>
         </section>
-        <hr>
-        <p style="display:block; text-align:center;">Cafe de Paris 2022</p>
+        <div >
+            <p class="footer">Cafe de Paris 2022</p>
+
+        </div>
     </body>
 </html>

@@ -77,7 +77,8 @@ public static function getNewsEdit($id){
                 $test=true;
             }
         }
-    } 
+    }
+    return $test; 
 }
 //-------------------------------------------news delete
 
