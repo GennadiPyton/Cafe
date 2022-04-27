@@ -43,9 +43,7 @@
                 ?>
             </div>
         </section>
-        <div >
-            <p class="footer">Cafe de Paris 2022</p>
-
-        </div>
+        <hr>
+        <p style="display:block; text-align:center; color:#007bff;"> &copy Trading 2021 </p>
     </body>
 </html>

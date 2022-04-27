@@ -3,7 +3,7 @@
 class Controller {
 
     public static function StartSite() {
-        $arr = News::getLast10News();
+        $arr = Items::getLast10Items();
         //print_r($arr);
         include_once 'view/start.php';
         return;
@@ -14,23 +14,23 @@ class Controller {
         include_once 'view/category.php';
     }
 
-    public static function AllNews() {
-        $arr = News::getAllNews();
-        include_once 'view/allnews.php';
+    public static function AllItems() {
+        $arr = Items::getAllItems();
+        include_once 'view/allitems.php';
     }
 
-    public static function NewsByCatID($id) {
-        $arr = News::getNewsByCategoryID($id);
-        include_once 'view/catnews.php';
+    public static function ItemsByCatID($id) {
+        $arr = Items::getItemsByCategoryID($id);
+        include_once 'view/catitems.php';
     }
 
-    public static function NewsByID($id) {
-        $n = News::getNewsByID($id);
-        include_once 'view/readnews.php';
+    public static function ItemsByID($id) {
+        $n = Items::getItemsByID($id);
+        include_once 'view/readitems.php';
     }
 
-    public static function SearchNews($search) {
-        $arr = News::getSearchNews($search);
+    public static function SearchItems($search) {
+        $arr = Items::getSearchItems($search);
         include_once 'view/searchview.php';
     }
 
@@ -44,34 +44,22 @@ class Controller {
 
     public static function InsertComment($c, $id) {
         Comments::InsertComment($c, $id);
-        self::NewsByID($id);
+        self::ItemsByID($id);
     }
 
-    public static function Comments($newsid) {
-        $arr = Comments::getCommentByNewsID($newsid);
-        ViewComments::CommentsByNews($arr);
+    public static function Comments($itemsid) {
+        $arr = Comments::getCommentByItemsID($itemsid);
+        ViewComments::CommentsByItems($arr);
     }
 
-    public static function CommentsCount($newsid) {
-        $arr = Comments::getCommentsCountByNewsID($newsid);
+    public static function CommentsCount($itemsid) {
+        $arr = Comments::getCommentsCountByItemsID($itemsid);
         ViewComments::CommentsCount($arr);
     }
 
-    public static function CommentsCountWithAncor($newsid) {
-        $arr = Comments::getCommentsCountByNewsID($newsid);
+    public static function CommentsCountWithAncor($itemsid) {
+        $arr = Comments::getCommentsCountByItemsID($itemsid);
         ViewComments::CommentsCountWithAncor($arr);
-    }
-
-    // ------------------------РЕГИСТРАЦИЯ
-    public function registerForm()
-    {
-        include_once('view/formRegister.php');
-    }
-    public function registerUser()
-    {
-        $result = Register::registerUser();
-
-        include_once('view/answerRegister.php');
     }
 
 }//class

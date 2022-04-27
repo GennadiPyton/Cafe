@@ -9,14 +9,14 @@ class Comments {
         return $q;
     }
 
-    public static function getCommentByNewsID($id) {
+    public static function getCommentByItemsID($id) {
         $query = "SELECT * FROM comments where news_id=" . (string) $id . " ORDER BY id DESC";
         $db = new Database();
         $arr = $db->getAll($query);
         return $arr;
     }
 
-    public static function getCommentsCountByNewsID($id) {
+    public static function getCommentsCountByItemsID($id) {
         $query = "SELECT count(id) as 'count' FROM comments where news_id=" . (string) $id;
         $db = new Database();
         $c = $db->getOne($query);

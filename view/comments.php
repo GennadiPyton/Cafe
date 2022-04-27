@@ -10,7 +10,7 @@ class ViewComments {
         <input type="submit" value="Saada"> </form>';
     }
 
-    public static function CommentsByNews($arr) {
+    public static function CommentsByItems($arr) {
         if ($arr != null) {
             echo '<table id="ctable"><th>Kommentaar</th><th>Kuupäev</th>';
             foreach ($arr as $value) {

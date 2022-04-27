@@ -9,27 +9,17 @@ $path = explode('/', $host)[$num];
 if ($path == '' OR $path == 'index' OR $path == 'index.php') {
     $response = Controller::StartSite();
 } elseif ($path == 'all') {
-    $response = Controller::AllNews();
+    $response = Controller::AllItems();
 } elseif ($path == 'category' and isset($_GET['id'])) {
-    $response = Controller::NewsByCatID($_GET['id']);
-} elseif ($path == 'news' and isset($_GET['id'])) {
-    $response = Controller::NewsByID($_GET['id']);
+    $response = Controller::ItemsByCatID($_GET['id']);
+} elseif ($path == 'items' and isset($_GET['id'])) {
+    $response = Controller::ItemsByID($_GET['id']);
 }elseif ($path == 'search' and isset($_GET['otsi'])) {
-    $response = Controller::SearchNews($_GET['otsi']);
+    $response = Controller::SearchItems($_GET['otsi']);
 } elseif ($path == 'insertcomment' and isset($_GET['comment'], $_GET['id'])) {
     $response = Controller::InsertComment($_GET['comment'], $_GET['id']);
 }elseif ($path == 'info' ) {
     $response = Controller::info();
-}
-//--------------register user
-elseif ($path == 'registerForm' )
-{   //from register
-    
-    $response = Controller::registerForm();
-}
-elseif ($path == 'registerAnswer' )
-{   //register user
-    $response = Controller::registerUser();
 }
 //error page
 else {

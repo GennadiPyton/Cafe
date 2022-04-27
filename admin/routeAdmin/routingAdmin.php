@@ -16,32 +16,32 @@ if ($path == "" OR $path == "index") {
     $response = controllerAdmin::logoutAction();
 }
 
-    //-------------------------------listNews
-elseif($path=='newsAdmin') {
-    $response=controllerAdminNews::NewsList();
+    //-------------------------------listItems
+elseif($path=='itemsAdmin') {
+    $response=controllerAdminItems::ItemsList();
 }
 
-//-----------------add news
-    elseif($path=='newsAdd') {
-        $response=controllerAdminNews::newsAddForm();
+//-----------------add items
+    elseif($path=='itemsAdd') {
+        $response=controllerAdminItems::itemsAddForm();
 
 }
-elseif($path == 'newsAddResult') {
-    $response = controllerAdminNews::newsAddResult();
+elseif($path == 'itemsAddResult') {
+    $response = controllerAdminItems::itemsAddResult();
 }
-//----------------------edit news
-elseif($path=='newsEdit' && isset($_GET['id'])) {
-    $response=controllerAdminNews::newsEditForm($_GET['id']);
+//----------------------edit items
+elseif($path=='itemsEdit' && isset($_GET['id'])) {
+    $response=controllerAdminItems::itemsEditForm($_GET['id']);
 }
-elseif($path == 'newsEditResult' && isset($_GET['id'])) {
-    $response = controllerAdminNews::newsEditResult($_GET['id']);
+elseif($path == 'itemsEditResult' && isset($_GET['id'])) {
+    $response = controllerAdminItems::itemsEditResult($_GET['id']);
 }
-//----------------------delete news
-elseif($path=='newsDel' && isset($_GET['id'])) {
-    $response=controllerAdminNews::newsDeleteForm($_GET['id']);
+//----------------------delete items
+elseif($path=='itemsDel' && isset($_GET['id'])) {
+    $response=controllerAdminItems::itemsDeleteForm($_GET['id']);
 }
-elseif($path == 'newsDelResult' && isset($_GET['id'])) {
-    $response = controllerAdminNews::newsDeleteResult($_GET['id']);
+elseif($path == 'itemsDelResult' && isset($_GET['id'])) {
+    $response = controllerAdminItems::itemsDeleteResult($_GET['id']);
 }
 else {
     // страница не существует
