@@ -25,9 +25,9 @@
             echo'<br><b>Author: </b><i>'.$row['username'].'</i>';
             echo'</td>';
             echo'<td>
-            <a href="newsEdit?id='.$row['id'].'">Edit <span class="glyphicon
+            <a href="itemsEdit?id='.$row['id'].'">Edit <span class="glyphicon
             glyphicon-edit" aria-hidden="true"></span></a>
-            <a href="newsDel?id='.$row['id'].'">Delete <span class="glyphicon
+            <a href="itemsDel?id='.$row['id'].'">Delete <span class="glyphicon
             glyphicon-remove" aria-hidden="true"></span></a>
             </td>  ';
         echo '</tr>'; 
